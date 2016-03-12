@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Widget Demo</string>
+
+
+    <string name="text_temperature">Temp</string>
+    <string name="text_humidity">Hum</string>
+    <string name="text_airpressure">Air Pr</string>
+    <string name="text_light">Light</string>
+    <string name="text_time">Time</string>
+    <string name="text_show">Show Activity</string>
+    <string name="text_ble">Switch BLE</string>
+    <string name="text_on">ON</string>
+    <string name="text_off">OFF</string>
+    <string name="text_no_blukii">NO blukii scanned</string>
+    <string name="unit_temperature">°C</string>
+    <string name="unit_humidity">%</string>
+    <string name="unit_airpressure">hPa</string>
+    <string name="unit_light">Lux</string>
+
+</resources>

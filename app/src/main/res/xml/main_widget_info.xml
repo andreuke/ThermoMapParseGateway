@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:initialKeyguardLayout="@layout/main_widget"
+    android:initialLayout="@layout/main_widget"
+    android:minHeight="40dp"
+    android:minResizeHeight="40dp"
+    android:minWidth="250dp"
+    android:minResizeWidth="320dp"
+    android:previewImage="@drawable/blukii_line_info_srgb_150_white_rz"
+    android:resizeMode="horizontal|vertical"
+    android:updatePeriodMillis="0"
+    android:widgetCategory="home_screen"></appwidget-provider>

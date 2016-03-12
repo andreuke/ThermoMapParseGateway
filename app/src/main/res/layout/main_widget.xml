@@ -1,0 +1,141 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blukii_blue"
+    android:padding="@dimen/widget_margin">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        >
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:rowCount="4"
+            android:orientation="horizontal"
+            >
+
+
+            <TextView
+                android:layout_column="0"
+                android:layout_row="0"
+                android:id="@+id/temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temperature: Off"
+                android:textColor="#ffffff"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                />
+
+            <TextView
+                android:layout_column="0"
+                android:layout_row="1"
+                android:id="@+id/humidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Humidity: Off"
+                android:textColor="#ffffff"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                />
+
+            <TextView
+                android:layout_column="1"
+                android:layout_row="0"
+                android:id="@+id/airpressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Air Pressure: Off"
+                android:textColor="#ffffff"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                />
+
+            <TextView
+                android:layout_column="1"
+                android:layout_row="1"
+                android:id="@+id/light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Light: Off"
+                android:textColor="#ffffff"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                />
+
+            <TextView
+                android:layout_column="0"
+                android:layout_row="2"
+                android:layout_columnSpan="2"
+                android:id="@+id/blukii"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="blukii: None"
+                android:textColor="#ffffff"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                />
+
+            <TextView
+                android:layout_column="0"
+                android:layout_row="3"
+                android:layout_columnSpan="2"
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time: None"
+                android:textColor="#ffffff"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                />
+
+            <Button
+                android:layout_column="2"
+                android:layout_row="0"
+                android:layout_rowSpan="2"
+                android:layout_height="30dp"
+                android:layout_marginBottom="5dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:layout_width="wrap_content"
+                android:id="@+id/buttonShow"
+                android:text="@string/text_show"
+                android:layout_gravity="center_horizontal|top"
+                android:background="@color/blukii_orange"
+                android:textColor="@color/blukii_white"/>
+
+            <Button
+                android:layout_column="2"
+                android:layout_row="2"
+                android:layout_rowSpan="2"
+                android:layout_height="30dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:layout_width="wrap_content"
+                android:id="@+id/buttonBle"
+                android:text="Switch BLE ON"
+                android:layout_gravity="center_horizontal|top"
+                android:background="@color/blukii_orange"
+                android:textColor="@color/blukii_white" />
+
+        </GridLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

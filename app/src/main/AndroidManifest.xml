@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.blukii.android.blukii_android_widgetdemo">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+
+    <application
+        android:name=".api.InfoApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".general.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <receiver
+            android:name=".general.MainWidget"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.blukii.android.ACTION_SEND_BLUKIILIST" />
+                <action android:name="com.blukii.android.ACTION_WIDGETBUTTON_BLE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/main_widget_info" />
+        </receiver>
+        <receiver
+            android:name=".service.MainReceiver"
+            android:enabled="true" />
+
+        <service android:name=".service.DeviceDiscoveryService" />
+
+        <meta-data
+            android:name="com.parse.APPLICATION_ID"
+            android:value="UgpBs6shiogw481vKVs6kDG9MUdMu30k2zbmiaFL" />
+        <meta-data
+            android:name="com.parse.CLIENT_KEY"
+            android:value="PyVT4iZwzxSrUNWs6UoKUFZVFV1xHlnGvN0GyIPn" />
+
+
+    </application>
+
+</manifest>

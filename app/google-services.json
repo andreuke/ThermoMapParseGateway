@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_id": "blukii-info-app-dev",
+    "project_number": "568906857166",
+    "name": "blukii Info App"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:568906857166:android:1f0ea9cb678bc2a5",
+        "client_id": "android:com.blukii.infoapp",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "com.blukii.infoapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "cloud_messaging_service": {
+          "status": 2,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 1
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:568906857166:android:305d6ff9c50b9f47",
+        "client_id": "android:com.blukii.android.blukii_android_widgetdemo",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "com.blukii.android.blukii_android_widgetdemo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "cloud_messaging_service": {
+          "status": 2,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 1
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "client_info": [],
+  "ARTIFACT_VERSION": "1"
+}
