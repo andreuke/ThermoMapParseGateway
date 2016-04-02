@@ -47,11 +47,10 @@
 
         <meta-data
             android:name="com.parse.APPLICATION_ID"
-            android:value="UgpBs6shiogw481vKVs6kDG9MUdMu30k2zbmiaFL" />
+            android:value="8xgkmfNMWhCI2hfE5qwU6Rchto9gpQbwLBc0v4nB" />
         <meta-data
             android:name="com.parse.CLIENT_KEY"
-            android:value="PyVT4iZwzxSrUNWs6UoKUFZVFV1xHlnGvN0GyIPn" />
-
+            android:value="Bb9CK9MBP5cJhQQ7AHv5YYZZWVDiVYM4D4iES2bn" />
 
     </application>
 

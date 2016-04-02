@@ -18,6 +18,7 @@ import com.blukii.android.blukii_android_widgetdemo.model.InputElement;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Iterator;
 
 import com.parse.*;
@@ -34,6 +35,8 @@ public class DeviceDiscoveryService extends Service {
     private ArrayList<InputElement> blukiiArrayList = new ArrayList<InputElement>();
     private Handler handler;
     private SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss.SSS");
+
+    private HashMap<String, Date> blukiiUpdates = new HashMap<>();
 
     //DEFAULT VALUES
     public static final int DEFAULT_TIMEOUT_DURATION = 10000; // Time after blukii will be removed from blukiiArrayList
@@ -360,11 +363,21 @@ public class DeviceDiscoveryService extends Service {
     }
 
     private void sendToParse(InputElement sensorData) {
-        ParseObject sensorScore = new ParseObject("SensorRecord");
-        sensorScore.put("id", sensorData.getTagID());
-        sensorScore.put("temperature", sensorData.getTemperature());
-        sensorScore.put("timestamp", new Date(sensorData.getDeviceFoundDate()));
-        sensorScore.saveEventually();
+        String tag = sensorData.getTagID();
+        Date timestamp = new Date(sensorData.getDeviceFoundDate());
+        Date lastUpdate = blukiiUpdates.get(tag);
+        if(lastUpdate == null || (timestamp.getTime() - lastUpdate.getTime()) > 60 * 1000 ) {
+            blukiiUpdates.put(tag, timestamp);
+
+            ParseObject sensorScore = new ParseObject("SensorRecord");
+            sensorScore.put("id", tag);
+            sensorScore.put("temperature", sensorData.getTemperature());
+            sensorScore.put("timestamp", timestamp);
+            sensorScore.saveEventually();
+        }
+
+
+
     }
 
 

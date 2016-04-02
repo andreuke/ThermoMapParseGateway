@@ -7,6 +7,9 @@ import com.parse.*;
 
 import com.blukii.android.blukii_android_widgetdemo.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /*
  * Activity: only start screen
  */
@@ -19,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         Log.i(TAG, "onCreate");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         Parse.enableLocalDatastore(this);
         Parse.initialize(this);
@@ -38,4 +42,8 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
     }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
 }
