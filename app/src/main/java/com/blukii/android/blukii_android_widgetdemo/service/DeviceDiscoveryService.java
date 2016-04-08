@@ -370,7 +370,7 @@ public class DeviceDiscoveryService extends Service {
             blukiiUpdates.put(tag, timestamp);
 
             ParseObject sensorScore = new ParseObject("SensorRecord");
-            sensorScore.put("id", tag);
+            sensorScore.put("sensorID", tag);
             sensorScore.put("temperature", sensorData.getTemperature());
             sensorScore.put("timestamp", timestamp);
             sensorScore.saveEventually();
